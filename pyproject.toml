@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vector-clock-scratchpad"
+version = "0.1.0"
+description = "Distributed causality tracker for shared agent scratchpads preventing race conditions and detecting causal divergence"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+vector-clock-scratchpad = "vector_clock_scratchpad.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vector_clock_scratchpad*"]
